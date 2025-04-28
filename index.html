@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruleta Mágica</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <h1 class="title">Ruleta Mágica</h1>
+
+  <div class="controls">
+    <input type="text" id="option" placeholder="Opción">
+    <input type="number" id="percentage" placeholder="Porcentaje">
+    <button onclick="addOption()">Agregar</button>
+  </div>
+
+  <div class="controls">
+    <input type="text" id="wheelName" placeholder="Nombre de la ruleta">
+    <button onclick="saveWheel()">Guardar</button>
+    <select id="savedWheels"></select>
+    <button onclick="updateWheel()">Actualizar</button>
+    <button onclick="loadWheel()">Cargar</button>
+    <button onclick="deleteWheel()">Eliminar</button>
+  </div>
+
+  <canvas id="wheel" width="500" height="500"></canvas>
+
+  <br>
+  <button id="spinButton" onclick="spin()">Girar</button>
+
+  <script src="particles.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
